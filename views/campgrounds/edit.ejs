@@ -1,0 +1,22 @@
+<%- include ('../partials/header')%>
+<div class="container" style="margin-top:30px; padding:0 auto">
+  <div class="jumbotron text-center" >
+	<h1>
+	  Edit the <%=camp.name%>
+    </h1>
+	  
+  <div style="width:300px ; margin:auto ">	  
+    <form action="/camp/<%=camp._id%>?_method=PUT" method="POST">
+		<input style="margin-bottom:10px" class="form-control" type="text" value="<%=camp.name%>" name=camp[name]>  
+	    <input style="margin-bottom:10px" class="form-control" type="text" value="<%=camp.image%>" name=camp[image]>
+		<input style="margin-bottom:10px" class="form-control" type="text" value="<%=camp.description%>" name=camp[description]>
+	    <button style="margin-bottom:10px; width:300px" class="btn btn-large btn-primary">
+		  submit
+	    </button>
+    </form>
+  </div>
+  </div>
+	  
+</div>
+<%- include ('../partials/footer')%>
+

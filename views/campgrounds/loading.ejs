@@ -1,0 +1,85 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Yelp Camp</title>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+				@keyframes bgcolor {
+					0% {
+						background-image: url("https://images.unsplash.com/photo-1471115853179-bb1d604434e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+					}
+
+					10% {
+						background-image: url("https://images.unsplash.com/photo-1475483768296-6163e08872a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+					}
+
+					20% {
+						background-image: url("https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+					}
+
+					30% {
+						background-image: url("https://images.unsplash.com/photo-1528892677828-8862216f3665?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+					}
+
+					40% {
+						background-image: url("https://images.unsplash.com/photo-1492648272180-61e45a8d98a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+					}
+				}
+
+				body {
+					-webkit-animation: bgcolor 20s infinite;
+					animation: bgcolor 20s infinite;
+					-webkit-animation-direction: linear;
+					animation-direction: linear;
+					background-size:cover;
+			        background-repeat:no-repeat; 
+					background-position:50% 50%;
+				}
+			
+		</style>
+	</head>
+	
+<body style="background-color:black">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <div class="container-fluid">
+	 <a class="navbar-brand" href="/camp">Yelp</a>
+    
+     <div class="collapse navbar-collapse">
+	   <ul class="navbar-nav ml-auto">
+		  <%if(!currentUser){%>
+			 <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+		     <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+		  <%}else{%>
+		     <li class="nav-item"><a class="nav-link" href="#">Sign in as <%=currentUser.username%></a></li>
+		     <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+		  <%}%>  
+		   
+	   </ul>
+     </div>
+ </div>	
+</nav>
+	
+<div class="container" style="margin-top:10px">
+  <%if(error && error.length>0){%>	
+	<div class="alert alert-danger" role="alert">
+	  <%=error%>
+	</div>
+  <%}%>
+  <% if(success && success.length>0){%>		
+	<div class="alert alert-success" role="alert">
+	  <%=success%>
+	</div>	
+  <%}%>	
+</div>	
+	
+<div  style="text-align:center; margin-top:15%; color:white">
+	<h1>
+	 Welcome to Yelp Camp Page!!!
+    </h1>
+    <a href="/camp"><button class="btn btn-success">
+		Visit Campgrounds
+	</button></a>
+</div>
+	
+</body>
+</html>

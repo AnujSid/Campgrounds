@@ -1,0 +1,24 @@
+<%- include ('../partials/header')%>
+<div class="container" style="margin-top:30px; padding:0 auto">
+  <div class="jumbotron text-center" >
+	<h1>
+	  Create a new Campground
+    </h1>
+	  
+  <div style="width:300px ; margin:auto ">	  
+    <form action="/camp" method="POST">
+		<input style="margin-bottom:10px" class="form-control" type="text" placeholder="name" name="name">  
+	    <input style="margin-bottom:10px" class="form-control" type="text" placeholder="image" name="image">
+		<input style="margin-bottom:10px" class="form-control" type="text" placeholder="description" name="description">
+	    <button style="margin-bottom:10px; width:300px" class="btn btn-large btn-primary">
+		  submit
+	    </button>
+    </form>
+  </div>
+	  
+    <a href="/camp">Visit Campground Page</a>
+  </div>
+	  
+</div>
+<%- include ('../partials/footer')%>
+

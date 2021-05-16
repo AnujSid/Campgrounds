@@ -1,0 +1,21 @@
+<%- include ('partials/header')%>
+
+<div class="container" style="margin-top:30px; padding:0 auto">
+  <div class="jumbotron text-center" > 
+	  <h1>
+	     Register Yourself
+      </h1>
+  <div style="width:300px ; margin:auto ">	  
+  <form action="/register" method="POST">
+		<input style="margin-bottom:10px" class="form-control" type="text" placeholder="username" name=username>
+		<input style="margin-bottom:10px" class="form-control" type="password" placeholder="password" name=password>
+		<button style="margin-bottom:10px; width:300px" class="btn btn-primary">
+			Register
+		</button>
+  </form>
+ </div>
+ </div>	  
+</div>
+
+<%- include ('partials/footer')%>
+
